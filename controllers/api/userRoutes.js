@@ -43,7 +43,7 @@ router.post("/login", async (req, res) => {
   try {
     // Find the user by their username in the database
     const userData = await User.findOne({ where: { username: req.body.username } });
-
+    console.log(req.body)
     if (!userData) {
       // If the user is not found, send a 400 status code and error message
       res.status(400).json({ message: "Incorrect username or password, please try again" });
@@ -52,7 +52,7 @@ router.post("/login", async (req, res) => {
 
     // Check if the provided password matches the user's password in the database
     const validPassword = await userData.checkPassword(req.body.password);
-
+    console.log(validPassword)
     if (!validPassword) {
       // If the password does not match, send a 400 status code and error message
       res.status(400).json({ message: "Incorrect email or password, please try again" });
@@ -65,6 +65,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
       res.status(200).json({ user: userData, message: "You are now logged in!" });
     });
+    console.log(req.session)
   } catch (err) {
     res.status(400).json(err); // Send a 400 status code and error message if an error occurs
   }

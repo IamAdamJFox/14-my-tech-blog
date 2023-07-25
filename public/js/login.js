@@ -3,8 +3,8 @@ const LoginFormHandler = async (event) => {
   event.preventDefault(); // Prevent the default form submission behavior
 
   // Get the values of the username and password input fields
-  const username = document.querySelector('#username--login').value.trim();
-  const password = document.querySelector('#password--login').value.trim();
+  const username = document.querySelector('#username-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
 
   // If the input fields have values
   if (username && password) {

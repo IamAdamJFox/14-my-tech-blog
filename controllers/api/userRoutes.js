@@ -53,7 +53,7 @@ router.post("/login", async (req, res) => {
     // Check if the provided password matches the user's password in the database
     const validPassword = await userData.checkPassword(req.body.password);
     console.log(validPassword)
-    if (!validPassword) {
+        if (!validPassword) {
       // If the password does not match, send a 400 status code and error message
       res.status(400).json({ message: "Incorrect email or password, please try again" });
       return;

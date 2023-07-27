@@ -21,7 +21,7 @@ const updatePostFormHandler = async (event) => {
 
       // Check if the update was successful
       if (response.ok) {
-        // Redirect to the dashboard page
+        // Redirect to the dashboard page when successful
         document.location.replace("/dashboard");
       } else {
         // Show an alert for unsuccessful update
@@ -47,7 +47,7 @@ const deletePostFormHandler = async (event) => {
 
     // Check if the deletion was successful
     if (response.ok) {
-      // Redirect to the dashboard page
+      // Redirect to the dashboard page when successful
       document.location.replace("/dashboard");
     } else {
       // Show an alert for unsuccessful deletion
@@ -64,11 +64,14 @@ const deletePostFormHandler = async (event) => {
 const updatePostButton = document.querySelector("#update-post");
 
 if (updatePostButton) {
+  // Add event listener for the "Update Post" button click
   updatePostButton.addEventListener("click", updatePostFormHandler);
 }
 
 const deletePostButton = document.querySelector("#delete-post");
 
 if (deletePostButton) {
+  // Add event listener for the "Delete Post" button click
   deletePostButton.addEventListener("click", deletePostFormHandler);
 }
+

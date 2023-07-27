@@ -1,5 +1,4 @@
 // idleLogout.js
-import logout from './logout.js'
 
 let idleTimeout; // Variable to store the timeout reference
 
@@ -7,7 +6,7 @@ let idleTimeout; // Variable to store the timeout reference
 // Function to reset the idle timeout
 function resetIdleTimeout() {
   clearTimeout(idleTimeout);
-  idleTimeout = setTimeout(logout, 600); // 600000ms (10 minutes) of inactivity until logout
+  idleTimeout = setTimeout(Logout, 300000); // 300000ms (5 minutes) of inactivity until logout
 }
 
 // Add event listeners for user activity

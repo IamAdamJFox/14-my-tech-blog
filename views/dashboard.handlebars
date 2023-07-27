@@ -1,14 +1,14 @@
 <main class="container mt-5">
   <div class="row">
-    <div class="col-12">
+    <div class="col-8">
       <h1 class="mb-4">Dashboard</h1>
       <a href="/newpost" class="btn btn-primary">Create a New Blog Post</a>
     </div>
   </div>
   <br>
-  <h1 class="mb-4">Tech Blog Contributions:</h1>
+  <h1 class="mb-5">Tech Blog Contributions:</h1>
   {{#each posts}}
-    <div class="post-container post mb-3">
+    <div class="post-container post mb-5">
       <h2><a href="/post/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
       <p>Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
       <a href="/editpost/{{id}}" class="btn btn-warning">Edit Post</a>

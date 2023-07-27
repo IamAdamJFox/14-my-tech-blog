@@ -21,4 +21,6 @@ if (LogoutButton) {
   LogoutButton.addEventListener('click', Logout);
 }
 
+module.export = logout
+
   

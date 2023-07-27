@@ -7,7 +7,7 @@ let idleTimeout; // Variable to store the timeout reference
 // Function to reset the idle timeout
 function resetIdleTimeout() {
   clearTimeout(idleTimeout);
-  idleTimeout = setTimeout(logout, 6000); // 600000ms (10 minutes) of inactivity until logout
+  idleTimeout = setTimeout(logout, 600); // 600000ms (10 minutes) of inactivity until logout
 }
 
 // Add event listeners for user activity

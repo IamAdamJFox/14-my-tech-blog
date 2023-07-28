@@ -1,27 +1,42 @@
 <main class="container mt-5">
+  <!-- Heading for the edit post page -->
   <h1 class="mb-4">Edit Post</h1>
+  
+  <!-- Form for updating the blog post -->
   <form class="update-post-form" class="mb-3">
+    <!-- Input field for the post title -->
     <div class="mb-3">
+      <!-- Label for the title input field -->
       <label for="title-update-post" class="form-label">Title</label>
+      <!-- Input field to enter the post title -->
       <input
         type="text"
         class="form-control"
         id="title-update-post"
         placeholder="Enter post title"
-        value="{{title}}"
+        value="{{title}}" <!-- Pre-fill the input field with the existing title using the '{{title}}' placeholder -->
       />
     </div>
+    
+    <!-- Textarea field for the post content -->
     <div class="mb-3">
+      <!-- Label for the content textarea field -->
       <label for="content-update-post" class="form-label">Content</label>
+      <!-- Textarea to enter the post content -->
       <textarea
         class="form-control"
         id="content-update-post"
         rows="3"
         placeholder="Enter post content"
-      >{{content}}</textarea>
+      >{{content}}</textarea> <!-- Pre-fill the textarea with the existing content using the '{{content}}' placeholder -->
     </div>
+    
+    <!-- Button to submit the updated post data -->
     <button type="submit" id="update-post" class="btn btn-primary">Update Post</button>
+    
+    <!-- Button to delete the post -->
     <button type="button" id="delete-post" class="btn btn-danger">Delete Post</button>
   </form>
 </main>
+
 

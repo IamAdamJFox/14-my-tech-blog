@@ -1,16 +1,27 @@
 <main class="container mt-5">
+  <!-- Heading for the tech blog posts page with white text color -->
   <h1 class="mb-4 text-white">Tech Blog Posts</h1>
+  
+  <!-- Container to display the tech blog posts in a row -->
   <div class="row">
+    <!-- Loop through each blog post in the 'posts' collection -->
     {{#each posts}}
+      <!-- Each blog post is displayed within a column of size 'md-4' (medium breakpoint) -->
       <div class="col-md-4">
+        <!-- Card for displaying individual blog post -->
         <div class="card mb-3">
+          <!-- Card header with a red background color -->
           <div class="card-header bg-danger">
+            <!-- Blog post title with a link to view the full post -->
             <h2 class="card-title">
               <a href="/post/{{id}}" class="text-dark">{{title}}</a>
             </h2>
           </div>
+          
+          <!-- Card body with dark text color -->
           <div class="card-body text-dark">
-            <p>Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+            <!-- Information about the blog post's creator and creation date -->
+            <p>Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
           </div>
         </div>
       </div>
